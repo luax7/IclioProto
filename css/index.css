@@ -77,6 +77,10 @@ section {
     z-index: 1;
     transition: filter 1s ease-in-out;
 }
+#clio{
+    height: 10%;
+    width: 7%;
+}
 ul {
     display: flex;
     width: 100vw;
@@ -90,15 +94,18 @@ ul {
 }
 .options{
     display: flex;
-    justify-content: space-evenly;
-    width: 30%;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
     height: 100%;
     max-height: 100%;
     align-items: center;
+    margin-right: 5%;
 }
 .options li {
     padding: 5%;
-    width: 50%;
+    width: 60%;
+    max-width: 132px;
 }
 .navbar{
     position: relative;
