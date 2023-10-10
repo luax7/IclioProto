@@ -1,0 +1,77 @@
+{
+    "US":{
+        "marketing":[
+            "marketing as you never seen before"
+        ],
+        "aititle": [
+            "Get to know our ai resources"
+        ],
+        "aiparagraph":[
+            "libero enim sed faucibus turpis in eu mi bibendum neque egestascongue quisque egestas diam in arcu cursus euismod quis viverra nibh cras pulvinar mattis nuncsed blandit libero volutpat"
+        ],
+        "register":[
+            "Register"
+        ],
+        "account": [
+            "Already has an account?",
+            "Don't have an account?"
+        ]
+    },
+    "FR":{
+            "marketing": [
+                "marketing comme vous ne l'avez jamais vu auparavant"
+            ],
+            "aititle": [
+                "Découvrez nos ressources en IA"
+            ],
+            "aiparagraph": [
+                "libero enim sed faucibus turpis in eu mi bibendum neque egestascongue quisque egestas diam in arcu cursus euismod quis viverra nibh cras pulvinar mattis nuncsed blandit libero volutpat"
+            ],
+            "register": [
+                "S'inscrire"
+            ],
+            "account": [
+                "Vous avez déjà un compte?",
+                "Vous n'avez pas de compte?"
+            ]
+    },
+    "BR":{
+        
+            "marketing": [
+                "marketing como você nunca viu antes"
+            ],
+            "aititle": [
+                "Conheça nossos recursos de IA"
+            ],
+            "aiparagraph": [
+                "libero enim sed faucibus turpis in eu mi bibendum neque egestascongue quisque egestas diam in arcu cursus euismod quis viverra nibh cras pulvinar mattis nuncsed blandit libero volutpat"
+            ],
+            "register": [
+                "Registrar"
+            ],
+            "account": [
+                "Já tem uma conta?",
+                "Não tem uma conta?"
+            ]
+        
+        
+    },
+    "DE":{
+            "marketing": [
+                "Marketing wie Sie es noch nie zuvor gesehen haben"
+            ],
+            "aititle": [
+                "Lernen Sie unsere KI-Ressourcen kennen"
+            ],
+            "aiparagraph": [
+                "libero enim sed faucibus turpis in eu mi bibendum neque egestascongue quisque egestas diam in arcu cursus euismod quis viverra nibh cras pulvinar mattis nuncsed blandit libero volutpat"
+            ],
+            "register": [
+                "Registrieren"
+            ],
+            "account": [
+                "Haben Sie bereits ein Konto?",
+                "Haben Sie kein Konto?"
+            ]
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iclio Company</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/x-icon" href="./assets/FAVICON.png">
+    </link>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./script/visualScript.js" defer></script>
+    <script>
+
+        //Here is the code for the geoloc system. Fell free to modify.
+
+        //I'm making sure that each localization can have sub-localizations. 
+        //which is usefull for texts that change, like the register/login text
+
+        //So, each text has its id, wich is mapped onto the JSON object. 
+        //Then, on document load, it is loaded on the texts
+
+        //USING JQUERY from a site called ipinfo.io
+        //This site is trackeed by ADBLOCK, so maybe you should use the geolocation API instead.
+        //All the architecture is here, so if you change to the geolocation API, you should just
+        //change the country names at the "database" of localizations.
+        
+
+        //Once the document is loaded, we can start to load the localizations.
+
+        var PredefinedLocalizations;
+        var country;
+
+
+        $.getJSON("./script/localizations.json", async function (predefined, status) {
+            PredefinedLocalizations = predefined;
+
+        })
+
+        $.get("https://ipinfo.io", (data) => {
+            country = data.country
+        }, "jsonp")
+
+        $(document).ready(async () => {
+            if (!PredefinedLocalizations[country]) country = "US";
+
+            MapTexts(country)
+        })
+
+
+        //You can call this function when the user changes their preferences too
+        function MapTexts(country) {
+            const texts = document.getElementsByClassName("text")
+
+            for (element of texts) {
+                ChangeText(country, element, 0)
+            }
+        }
+        //This is almos a inside function, please minimize the direct call
+        function ChangeText(country, element, variation) {
+            const Loc = PredefinedLocalizations[country][element.id][variation]
+
+            element.innerText = Loc
+        }
+
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <ul >
+            <li><img src="" alt=""></li>
+            <div class="options">
+                <li>products</li>
+                <li>Who are we</li>
+            </div>
+        </ul>
+    </div>
+
+
+
+    <div class="main" id="main">
+
+        <div class="arrow" id="arrow">
+            <div class="line"></div>
+            <div class="point"></div>
+        </div>
+
+        <section id="section1">
+            <div class="static">
+
+                <img src="./assets/globeexpo.png" alt="Super cool image!" id="globeexpo">
+                <h1 id="marketing" class="text">Digital marketing as you never seen before</h1>
+
+
+                <img src="./assets/wavedir1.svg" alt="Cool wave" class="wavedir wave">
+
+            </div>
+        </section>
+
+            <div class="sectionmargin"></div>
+
+        <section id="section2">
+            <div class="static">
+                <img src="./assets/wavesq1.svg" alt="Cool wave" class="wavesq wave">
+
+                <div class="text " id="airesourcesdiv">
+                    <h1 class="text" id="aititle">Get to know our ai resources</h1>
+                    <h3 class="text" id="aiparagraph">libero enim sed faucibus turpis in eu mi bibendum neque egestas
+                        congue quisque egestas diam in arcu cursus euismod quis viverra nibh cras pulvinar mattis nunc
+                        sed blandit libero volutpat</h3>
+                </div>
+
+                <img src="./assets/globestudy.png" alt="" id="globestudy">
+
+                <img src="./assets/wavedir1.svg" alt="Cool wave" class="wavedir wave">
+            </div>
+        </section>
+
+            <div class="sectionmargin"></div>
+
+        <section id="section3">
+            <div class="static">
+                <img src="./assets/wavesq1.svg" alt="Cool wave" class="wavesq wave">
+
+                    <div class="loginsection">
+                        <h1 class="text" id="register">Register</h1>
+                        <div class="emptybar">
+        
+                        </div>
+                        <form action="" id="logintable">
+                            <div class="inputs">
+                                <div class="emptybar"></div>
+                                <input type="text">
+        
+                                <div class="emptybar" id="secondbar"></div>
+                                <input type="text">
+        
+                            </div>
+        
+                            <button id="submitbutton">Submit</button>
+                            <a class="text" id="account" onclick="changemode()">Already Has an account?</a>
+                        </form>
+                    </div>
+
+
+                <img src="./assets/wavedir1.svg" alt="Cool wave" class="wavedir wave">
+
+            </div>
+
+        </section>
+    </div>
+
+</body>
+
+</html>
