@@ -1,3 +1,17 @@
+:root{
+    --Main1:#1F82BF;
+    --Main2:#2175BF;
+    --Background:#D2E1E6;
+    --AnalogToMain2:#1F82BF;
+    --TextColor:black;
+    --LoginSection: #797EF6;
+    --AnalogToLoginSection: #4ADEDE;
+
+    --MetalGradient: linear-gradient(45deg,  var(--AnalogToLoginSection) 35%, var(--LoginSection) 94%);
+    --BaseGradient : linear-gradient(180deg, var(--AnalogToMain2) 9%, var(--Main2) 100%);
+}
+
+
 .text{
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -33,14 +47,14 @@ html {
     position: fixed;
     transition: transform 1s ease-out;
     width: calc(300vw + 40%);
-    background-color: #F3EFF3;
+    background-color: var(--Background);
 }
 body{
     margin: 0px;
     overflow: hidden;
     height: 100vh;
     width: 100%;
-    background-color: #c62368;
+    background-color: var(--Blue1);
 }
 section .static {
 
@@ -53,7 +67,7 @@ section .static {
 .sectionmargin{
     height: 100vh;
     width: 10%;
-    background: #c62368;
+    background: var(--Main1);
     position: relative;
     z-index: 99;
 }
@@ -67,8 +81,8 @@ ul {
     display: flex;
     width: 100vw;
     height: 100%;
-    background: rgb(255,154,45);
-    background: linear-gradient(180deg, rgba(255,154,45,1) 9%, rgba(242,102,40,1) 100%);
+    background: var(--AnalogToMain2);
+    background: var(--MetalGradient);
     margin: 0px;
     align-items: center;
     justify-content: end;
@@ -109,12 +123,12 @@ ul {
  width: 140%;
 }
 #aititle{
-    color: #F26628;
+    color: var(--Main2);
     text-decoration-line: underline;
 }
 
 #aiparagraph{
-    color: #FAA16F;
+    color: var(--TextColor);
     line-height: 120%;
 }
 
@@ -128,8 +142,8 @@ ul {
 
 #logintable {
     width: 25vw;
-    background: rgb(48,93,112);
-    background: linear-gradient(45deg, rgba(48,93,112,1) 35%, rgba(59,112,147,1) 94%);
+    background: var(--AnalogToLoginSection);
+    background: var(--BaseGradient);
     display: flex;
     flex-direction: column;
     height: 15vw;
@@ -145,8 +159,8 @@ ul {
     height: 20%;
     margin-top: 5%;
     border-radius: 25px;
-    background: rgb(255,154,45);
-    background: linear-gradient(180deg, rgba(255,154,45,1) 9%, rgba(242,102,40,1) 100%);
+    background: var(--AnalogToMain2);
+    background: var(--MetalGradient);
     justify-content: space-around;
     border: none;
     font-size: 2.5em;
@@ -173,12 +187,12 @@ ul {
 {
     height: 5%;
     width: 80%;
-    background: rgb(255,154,45);
-    background: linear-gradient(180deg, rgba(255,154,45,1) 9%, rgba(242,102,40,1) 100%);
+    background: var(--AnalogToMain2);
+    background: var(--MetalGradient);
     border-radius: 0px 20px 0px 0px;
 }
 #account {
-    color: #FAA16F;
+    color: var(--TextColor);
     text-decoration-line: underline;
 }
 
@@ -201,7 +215,7 @@ ul {
     top:10%;
     max-width: 40%;
     text-decoration-line: underline;
-    color: #F26628;
+    color: var(--Main2);
     text-align: center;
 }
 .wavedir{
@@ -234,14 +248,14 @@ ul {
 }
 #register {
     font-size: 3em;
-    color: #F26628;
+    color: var(--Main2);
     text-decoration-line: underline;
 }
 .loginsection .emptybar{
     width: 100%;
     height: 1vw;
-    background: rgb(255,154,45);
-    background: linear-gradient(180deg, rgba(255,154,45,1) 9%, rgba(242,102,40,1) 100%);
+    background: var(--AnalogToMain2);
+    background: var(--MetalGradient);
     border-radius: 5px 5px 0px 0px;
 }
 
@@ -262,8 +276,8 @@ section {
     position: relative;
     margin-top: 14px;
     width: 100%;
-    background: rgb(255,154,45);
-    background: linear-gradient(180deg, rgba(255,154,45,1) 9%, rgba(242,102,40,1) 100%);
+    background: var(--AnalogToMain2);
+    background: linear-gradient(180deg, var(--AnalogToMain2) 9%, var(--Main2) 100%);
     height: 10px;
     float: left;
     z-index: 20;
@@ -276,7 +290,7 @@ section {
     height: 0;
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
-    border-left: 30px solid rgba(255,154,45,1);
+    border-left: 30px solid var(--AnalogToMain2);
     float: right;
   }
 
